@@ -1,0 +1,23 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid transparent;
+  border-radius: 10px;
+  padding: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card--teal {
+  border-top-color: var(--card-teal);
+}
+
+.card--amber {
+  border-top-color: var(--card-amber);
+}
+
+.card--violet {
+  border-top-color: var(--card-violet);
+}
