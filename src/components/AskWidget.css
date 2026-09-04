@@ -1,0 +1,72 @@
+.ask-widget {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ask-widget__messages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ask-widget__pair {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ask-widget__question {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.ask-widget__form {
+  display: flex;
+  gap: 8px;
+}
+
+.ask-widget__form input {
+  flex: 1;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: var(--text-h);
+  font: inherit;
+}
+
+.ask-widget__form input:focus {
+  outline: none;
+  border-color: var(--accent-border);
+}
+
+.ask-widget__form button {
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  padding: 10px 16px;
+  color: var(--text-h);
+  font: inherit;
+  cursor: pointer;
+}
+
+.ask-widget__form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ask-widget__count,
+.ask-widget__limit {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.ask-widget__error {
+  color: var(--card-amber);
+}

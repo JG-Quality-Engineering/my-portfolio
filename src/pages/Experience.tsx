@@ -5,7 +5,7 @@ function Experience() {
   return (
     <section className="experience-cards">
       <Card title="Sparq | Senior Consultant, Test Automation" accent="violet">
-        <p className="experience-meta">Apr 2023 – Aug 2026</p>
+        <p className="experience-meta">Apr 2023 – Present</p>
         <ul>
           <li>
             Set the architectural vision and testing standards for a
