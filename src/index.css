@@ -16,6 +16,8 @@
   --card-amber: #fbbf24;
   --card-violet: #c084fc;
 
+  --content-width: 1126px;
+
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
@@ -36,7 +38,7 @@
 }
 
 #root {
-  width: 1126px;
+  width: var(--content-width);
   max-width: 100%;
   margin: 0 auto;
   text-align: center;

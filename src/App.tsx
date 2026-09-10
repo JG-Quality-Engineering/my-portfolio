@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
+import PagePhoto from './components/PagePhoto'
 import About from './pages/About'
 import Experience from './pages/Experience'
 import GenAI from './pages/GenAI'
@@ -9,6 +10,7 @@ function App() {
   return (
     <>
       <NavBar />
+      <PagePhoto />
       <main>
         <Routes>
           <Route path="/" element={<About />} />

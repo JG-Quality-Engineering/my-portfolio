@@ -1,0 +1,44 @@
+.page-photo {
+  /* Anchored to the empty margin left of the centered #root column, not part
+     of any page's own layout — so it never reflows page content and stays
+     in the same spot no matter which page (or how much content) is showing. */
+  position: fixed;
+  /* Lines up with each page's card top edge: navbar height (~62px, from its
+     1rem padding + line-height) plus the 32px padding every page content
+     container uses. */
+  top: 94px;
+  left: calc(50vw - (var(--content-width) / 2) - 268px);
+
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--border);
+}
+
+/* Not enough room beside the content column below this width — hide rather
+   than let it clip against the viewport edge. */
+@media (max-width: 1700px) {
+  .page-photo {
+    display: none;
+  }
+}
+
+.page-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-photo--teal {
+  border-color: var(--card-teal);
+}
+
+.page-photo--amber {
+  border-color: var(--card-amber);
+}
+
+.page-photo--violet {
+  border-color: var(--card-violet);
+}
