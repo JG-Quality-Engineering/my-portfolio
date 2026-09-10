@@ -2,20 +2,16 @@ import { useState, type FormEvent } from 'react'
 import './AskWidget.css'
 
 const MAX_QUESTIONS = 3
-const SESSION_STORAGE_KEY = 'genai-widget-questions-asked'
 
 type QaPair = {
   question: string
   answer: string
 }
 
-// Stub for the real call — step 3 will add a serverless function and step 4
-// will swap this out for a fetch() to it. Keeping the UI/state work here
-// separate means we can build and test this component before the backend
-// exists at all.
-async function fetchAnswer(question: string): Promise<string> {
-  await new Promise((resolve) => setTimeout(resolve, 600))
-  return `(stub response) You asked: "${question}"`
+type AskResponse = {
+  answer?: string
+  remaining?: number
+  error?: string
 }
 
 function AskWidget() {
@@ -23,13 +19,11 @@ function AskWidget() {
   const [messages, setMessages] = useState<QaPair[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [questionsAsked, setQuestionsAsked] = useState(() => {
-    const stored = sessionStorage.getItem(SESSION_STORAGE_KEY)
-    return stored ? Number(stored) : 0
-  })
-
-  const limitReached = questionsAsked >= MAX_QUESTIONS
-  const questionsRemaining = MAX_QUESTIONS - questionsAsked
+  // Starts optimistic; the server's `remaining` value (tied to the IP-based
+  // Redis counter, not this browser) is the source of truth once a response
+  // comes back, since the real limit can't be known until then.
+  const [remaining, setRemaining] = useState(MAX_QUESTIONS)
+  const [limitReached, setLimitReached] = useState(false)
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault()
@@ -39,13 +33,28 @@ function AskWidget() {
     setError(null)
 
     try {
-      const answer = await fetchAnswer(question)
-      setMessages((prev) => [...prev, { question, answer }])
-      setQuestion('')
+      const response = await fetch('/api/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question }),
+      })
+      const data: AskResponse = await response.json()
 
-      const nextCount = questionsAsked + 1
-      setQuestionsAsked(nextCount)
-      sessionStorage.setItem(SESSION_STORAGE_KEY, String(nextCount))
+      if (!response.ok) {
+        setError(data.error ?? 'Something went wrong. Please try again.')
+        if (response.status === 429) {
+          setLimitReached(true)
+          setRemaining(0)
+        }
+        return
+      }
+
+      setMessages((prev) => [...prev, { question, answer: data.answer ?? '' }])
+      setQuestion('')
+      if (typeof data.remaining === 'number') {
+        setRemaining(data.remaining)
+        setLimitReached(data.remaining <= 0)
+      }
     } catch {
       setError('Something went wrong. Please try again.')
     } finally {
@@ -72,7 +81,8 @@ function AskWidget() {
 
       {limitReached ? (
         <p className="ask-widget__limit">
-          You've used all {MAX_QUESTIONS} questions for this session.
+          You've used all {MAX_QUESTIONS} questions for now. Please try again
+          in 24 hours.
         </p>
       ) : (
         <>
@@ -89,8 +99,7 @@ function AskWidget() {
             </button>
           </form>
           <p className="ask-widget__count">
-            {questionsRemaining} question{questionsRemaining === 1 ? '' : 's'}{' '}
-            remaining this session.
+            {remaining} question{remaining === 1 ? '' : 's'} remaining today.
           </p>
         </>
       )}
