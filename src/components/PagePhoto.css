@@ -7,7 +7,7 @@
      1rem padding + line-height) plus the 32px padding every page content
      container uses. */
   top: 94px;
-  left: calc(50vw - (var(--content-width) / 2) - 268px);
+  left: var(--rail-left);
 
   width: 220px;
   height: 220px;

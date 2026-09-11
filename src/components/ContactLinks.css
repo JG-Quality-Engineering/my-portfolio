@@ -1,0 +1,43 @@
+/* Mobile-first: a horizontal bar under the NavBar, visible on every screen
+   size (this is the only layout below the 1700px breakpoint, since
+   PagePhoto — and the rail beside it — aren't shown there). */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-links__item {
+  display: inline-block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 14px;
+  color: var(--text-h);
+  font: inherit;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Wide viewport: stack vertically in the same rail as PagePhoto, right
+   below it, instead of a bar in the page flow. */
+@media (min-width: 1701px) {
+  .contact-links {
+    position: fixed;
+    top: 346px;
+    left: var(--rail-left);
+    width: 220px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .contact-links__item {
+    text-align: center;
+  }
+}

@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
+import ContactLinks from './components/ContactLinks'
 import PagePhoto from './components/PagePhoto'
 import About from './pages/About'
 import Experience from './pages/Experience'
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <NavBar />
+      <ContactLinks />
       <PagePhoto />
       <main>
         <Routes>

@@ -17,6 +17,10 @@
   --card-violet: #c084fc;
 
   --content-width: 1126px;
+  /* Left edge of the decorative rail beside the centered content column
+     (used by PagePhoto and ContactLinks) — only meaningful once the
+     viewport is wide enough; both components hide below that breakpoint. */
+  --rail-left: calc(50vw - (var(--content-width) / 2) - 268px);
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
