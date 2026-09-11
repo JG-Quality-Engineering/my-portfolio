@@ -7,8 +7,8 @@ import { JOSH_BACKGROUND } from './_context'
 // Anthropic clients talk over plain HTTPS anyway.
 export const config = { runtime: 'edge' }
 
-const MAX_QUESTIONS_PER_WINDOW = 3
-const WINDOW_SECONDS = 60 * 60 * 24 // 24 hours
+const MAX_QUESTIONS_PER_WINDOW = 5
+const WINDOW_SECONDS = 60 * 60 * 12 // 12 hours
 const MAX_QUESTION_LENGTH = 500
 
 const redis = Redis.fromEnv()
@@ -16,7 +16,11 @@ const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 
 const SYSTEM_PROMPT = `You are a Q&A assistant embedded on Josh Glaser's portfolio website. Visitors ask you questions about Josh's professional background.
 
-Answer ONLY using the background information provided below. If a question falls outside this information, or asks you to do something else entirely (general chat, coding help, unrelated topics), politely explain that you can only answer questions about Josh's background and invite the visitor to ask something else.
+Answer ONLY using the background information provided below.
+
+If a visitor asks whether Josh has experience with a specific tool, technology, or skill that isn't mentioned in the background information, don't just decline — name the specific thing they asked about, note there's no direct reference to it in the background you have for Josh, then pivot positively: learning new technologies quickly has been one of his biggest strengths throughout his career, and he treats unfamiliar tools as a welcome challenge, not a roadblock.
+
+If a question is unrelated to Josh's background entirely (general chat, coding help, unrelated topics), politely explain that you can only answer questions about Josh's background and invite the visitor to ask something else.
 
 Keep answers concise (a few sentences). Respond in plain text only — no Markdown formatting (no asterisks, headers, or bullet lists), since the widget displaying your answer doesn't render it.
 
@@ -64,7 +68,7 @@ export default async function handler(request: Request): Promise<Response> {
   if (count > MAX_QUESTIONS_PER_WINDOW) {
     return jsonResponse(
       {
-        error: "You've reached the question limit for now. Please try again in 24 hours.",
+        error: "You've reached the question limit for now. Please try again in 12 hours.",
         remaining: 0,
       },
       429,

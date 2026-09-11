@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import './AskWidget.css'
 
-const MAX_QUESTIONS = 3
+const MAX_QUESTIONS = 5
 
 type QaPair = {
   question: string
@@ -82,7 +82,7 @@ function AskWidget() {
       {limitReached ? (
         <p className="ask-widget__limit">
           You've used all {MAX_QUESTIONS} questions for now. Please try again
-          in 24 hours.
+          in 12 hours.
         </p>
       ) : (
         <>
@@ -99,7 +99,8 @@ function AskWidget() {
             </button>
           </form>
           <p className="ask-widget__count">
-            {remaining} question{remaining === 1 ? '' : 's'} remaining today.
+            {remaining} question{remaining === 1 ? '' : 's'} remaining in this
+            12-hour window.
           </p>
         </>
       )}

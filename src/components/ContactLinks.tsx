@@ -30,7 +30,7 @@ function ContactLinks() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Full Resume View / Download
+        View Full Resume
       </a>
       <a
         className="contact-links__item"
