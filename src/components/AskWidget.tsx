@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react'
+import { useEffect, useState, type FormEvent } from 'react'
 import './AskWidget.css'
 
 const MAX_QUESTIONS = 5
@@ -19,11 +19,30 @@ function AskWidget() {
   const [messages, setMessages] = useState<QaPair[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  // Starts optimistic; the server's `remaining` value (tied to the IP-based
-  // Redis counter, not this browser) is the source of truth once a response
-  // comes back, since the real limit can't be known until then.
+  // Starts optimistic; corrected below by the mount-time status check, and
+  // again by the server's `remaining` value after each real question.
   const [remaining, setRemaining] = useState(MAX_QUESTIONS)
   const [limitReached, setLimitReached] = useState(false)
+
+  // Runs once when the widget first mounts (empty dependency array) to ask
+  // the server for this IP's actual current count, so a reload shows the
+  // real number instead of always assuming a fresh 5.
+  useEffect(() => {
+    async function loadStatus() {
+      try {
+        const response = await fetch('/api/ask')
+        const data: AskResponse = await response.json()
+        if (typeof data.remaining === 'number') {
+          setRemaining(data.remaining)
+          setLimitReached(data.remaining <= 0)
+        }
+      } catch {
+        // Leave the optimistic default in place if the status check fails.
+      }
+    }
+
+    loadStatus()
+  }, [])
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault()

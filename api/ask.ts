@@ -42,6 +42,15 @@ function getClientIp(request: Request): string {
 }
 
 export default async function handler(request: Request): Promise<Response> {
+  if (request.method === 'GET') {
+    // Status check only — reads the current count without incrementing it,
+    // so the widget can show an accurate "remaining" number on page load
+    // instead of always assuming a fresh 5 until the visitor asks something.
+    const ip = getClientIp(request)
+    const count = (await redis.get<number>(`ratelimit:${ip}`)) ?? 0
+    return jsonResponse({ remaining: Math.max(0, MAX_QUESTIONS_PER_WINDOW - count) }, 200)
+  }
+
   if (request.method !== 'POST') {
     return jsonResponse({ error: 'Method not allowed' }, 405)
   }
