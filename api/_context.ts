@@ -58,7 +58,7 @@ Special projects (at Encyclopedia Britannica):
 Core skills:
 (Role index: EB = Encyclopedia Britannica, LN = Lifelines Neuro, SP = Sparq)
 - Languages: Python(EB, LN), Java(LN, SP), SQL(all roles), XML(all roles), CSS(EB), Ruby, C#(LN)
-- Frameworks & Tools: TestNG(SP), Selenium(all roles), Appium(EB, LN), Robot Framework(LN), Rails, Postman(all roles), Kleopatra(SP), WinAppDriver(LN)
+- Frameworks & Tools: TestNG(SP), Selenium(all roles), Appium(EB, LN), Robot Framework(LN), Rails, REST API (allroles), Postman(all roles), Kleopatra(SP), WinAppDriver(LN)
 - Cloud & Databases: Google Cloud Suite (GCS Storage, BigQuery, Cloud Run, Spanner)(SP), Azure DevOps (ADO)(SP)
 - Software & IDEs: VS Code(LN, SP), GitHub Copilot(SP), Jira(EB, LN), Confluence(EB, LN), DataDog(EB), Git(all roles), Slack(all roles), PyCharm(EB, LN), Apache JMeter(EB), Xcode(EB), CI/CD Pipelines(all roles)
 
