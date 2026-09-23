@@ -6,45 +6,41 @@ function About() {
     <section className="about-cards">
       <Card title="Background" accent="teal">
         <p>
-          Rooted in the southwest suburbs of Chicago, my path into technology began
-          through an unexpected lens: studying music theory at Columbia College.
-          The discipline of pattern recognition and structural composition
-          eventually led me to DePaul University, where I earned a BS in
-          Information Technology with a concentration in Object-Oriented Programming.
-          While completing my studies, I turned an internship at Encyclopedia Britannica
-          into a full-time role, finishing my degree through night courses.
+          I grew up in Chicago's southwest suburbs and came to technology through studying 
+          music theory at Columbia College. Much of music is pattern recognition and structure, 
+          and since I didn't see many job openings for composers, I found my way to DePaul, 
+          where I earned a BS in Information Technology with a concentration in Object-Oriented 
+          Programming. Along the way I took an internship at Encyclopedia Britannica, turned it 
+          into a full-time job, and finished my degree by taking night courses.
         </p>
       </Card>
 
-      <Card title="Scaling Leadership & Enterprise Quality" accent="amber">
+      <Card title="From Tester to QA Leader" accent="amber">
         <p>
-          My trajectory in the industry accelerated within my first year at Britannica,
-          earning a rapid promotion into team leadership. Over the following
-          decade, my scope continuously expanded from hands-on test automation to
-          directing cross-functional QA, product, and engineering efforts. That
-          momentum carried into senior leadership roles at Lifelines Neuro and
-          Sparq, where I built enterprise level automation frameworks, mentored
-          junior engineers, and directed large, high-performing QA teams. Across massive cloud
-          data migrations, medical device integrations, and complex automation
-          frameworks, my focus has remained on bridging high-level strategic
-          roadmap execution with technical precision.
+          Within my first year at Britannica, I was promoted to team lead. Over the next ten years 
+          my job grew from writing test automation to running QA, product, and engineering work 
+          across teams. At Lifelines Neuro and Sparq, I moved into senior leadership. I built the 
+          automation frameworks, mentored junior engineers, and have run QA teams of up to 20 people.
+          The work ranged from massive cloud enterprise data migrations to medical device integrations. 
+          Through all of it, I've worked in the gap between the roadmap and the technical 
+          details that decide whether or not software is ready to ship.
         </p>
       </Card>
 
-      <Card title="Current Phase & Mission: Accessible GenAI Testing" accent="violet">
+      <Card title="My Current Focus" accent="violet">
         <p>
-          Today, my work centers on the frontier of modern quality assurance:
-          developing practical "human-in-the-loop" Generative AI testing
-          solutions. By designing custom AI workflows and project-specific
-          knowledge bases, I enable teams to automate time-intensive tasks and
-          drastically reduce manual testing overhead.
+          Today I build human-in-the-loop GenAI testing tools. I design custom AI workflows 
+          and project-specific knowledge bases that let teams automate the slow, repetitive parts of 
+          testing. I've become an expert at identifying bottleneck tasks, such as creating PII-free 
+          test data at UPS, and leveraged the power of AI to free up engineers to focus on the work 
+          that requires human judgment. Augmenting my team's workflows with these tools has saved 
+          hundreds of man hours for companies and drastically improved our code accuracy and coverage.
         </p>
         <p>
-          My mission is to make GenAI software testing accessible, safe, and
-          highly effective for enterprise organizations. Generative AI should not
-          be a mysterious black box or a threat to quality; when properly
-          integrated alongside human expertise, it elevates engineering velocity,
-          sharpens test accuracy, and unlocks unprecedented scale.
+          I want enterprise teams to be able to adopt GenAI testing safely, understand what it's 
+          doing, and trust the results. It doesn't have to be a black box or a risk to quality. 
+          Paired with experienced testers, it helps teams ship faster, catch more defects, 
+          and cover more ground than they could by hand.
         </p>
       </Card>
     </section>
