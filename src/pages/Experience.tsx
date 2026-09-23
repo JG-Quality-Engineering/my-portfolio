@@ -8,33 +8,32 @@ function Experience() {
         <p className="experience-meta">Apr 2023 – Present</p>
         <ul>
           <li>
-            Set the architectural vision and testing standards for a
-            multi-year, global payroll data migration to Google Cloud, acting
-            as the top technical authority on the engagement
+            Set the test architecture and standards for a multi-year payroll 
+            migration to Google Cloud: hundreds of thousands of data records 
+            from 40+ vendor sources aggregated and transformed, including pay, 
+            hours, taxes, benefits, bonuses, and PII demographics. 
+            Final technical decision-maker on the engagement.
           </li>
           <li>
-            Built and led a cross-functional automation team of up to 20
-            engineers, owning sprint execution, resourcing, and delivery
-            cadence
+            Built and led an automation team of up to 20 engineers. 
+            Ran sprints, staffing, and the release schedule.
           </li>
           <li>
-            Directed the selection and design of a ground-up Java/TestNG
-            automation framework across GCS Storage, BigQuery, Cloud Run, and
-            Spanner
+            Led the choice and design of a Java/TestNG framework, built from scratch, 
+            covering validation of Cloud Storage, BigQuery, Cloud Run, and Spanner data.
           </li>
           <li>
-            Pioneered GenAI-driven engineering practices — established GitHub
-            Copilot usage standards, built custom AI skills and prompts, and
-            automated test data generation to cut manual prep time
+            Wrote the team's GitHub Copilot standards, built custom AI skills and prompts, 
+            and automated test data generation, cutting manual prep from days to minutes.
           </li>
           <li>
-            Owned data security and PII compliance strategy for large volumes
-            of sensitive data, enforcing encryption and CI/CD security gates
+            Owned security and PII compliance for [ADD VOLUME] of sensitive data, 
+            including encryption and CI/CD security gates.
           </li>
           <li>
-            Acted as the primary technical liaison between consulting and
-            client leadership, translating engineering milestones into
-            business risk and roadmap terms
+            Main technical contact for client leadership. Explained engineering progress 
+            in terms of business risk and roadmap impact. Resposible for introducing 
+            AI-assisted coding and PR reviews to the project and training other teams on its proper use.
           </li>
         </ul>
       </Card>
@@ -46,21 +45,22 @@ function Experience() {
         <p className="experience-meta">Oct 2021 – Apr 2023</p>
         <ul>
           <li>
-            Led and mentored a 5-person QA team through fast-paced Agile
-            sprints for a portable medical EEG device
+            Led and mentored a 5-person QA team testing a portable 
+            medical EEG device in two-week Agile sprints.
           </li>
           <li>
-            Replaced a fully manual test process with an automated framework
-            built on WinAppDriver, Appium, and a custom Selenium command
-            library
+            Replaced a fully manual EEG data recording software test process with 
+            automation built on WinAppDriver, Appium, and a custom Selenium command library. 
+            Testing of the software improved from at least a full day each cycle to a few minute execution.
           </li>
           <li>
-            Worked across the hardware/firmware boundary to validate device
-            reliability alongside physical EEG test equipment
+            Tested device reliability across hardware and firmware using physical EEG test equipment. 
+            Several critical bugs were identified, including one where a change in patient WiFi connectivity
+            would end their remote monoitoring session without warning.
           </li>
           <li>
-            Introduced Robot Framework for readable, well-documented tests to
-            ease onboarding of transitioning engineers
+            Introduced Robot Framework so tests doubled as readable documentation, which made 
+            onboarding easier for new or transitioning test engineers by providing clear, maintainable test cases.
           </li>
         </ul>
       </Card>
@@ -72,23 +72,21 @@ function Experience() {
         <p className="experience-meta">Jun 2013 – Oct 2021</p>
         <ul>
           <li>
-            Started as an individual contributor, writing unit/integration
-            test plans and reusable Python/Selenium scripts for consumer
-            products
+            Started as an individual contributor writing unit and integration test 
+            plans and reusable Python/Selenium scripts for school.eb.com and library.eb.com 
+            (today combined into education.eb.com).
           </li>
           <li>
-            Promoted into a technical lead role, running daily Scrum
-            ceremonies and aligning QA, UX, and engineering across the
-            company's core web products
+            Promoted to technical lead in 2015. Ran daily Scrum and kept QA, 
+            UX, and Development aligned across all Britannica institutional products.
           </li>
           <li>
-            Cut regression cycle time by a full week through targeted
-            performance and load testing (HAR-based analysis, DataDog
-            monitoring)
+            Cut the regression cycle from 5 days to 2 by designing automated
+            performance and load testing tools that incorporated HAR analysis & Datadog monitoring.
           </li>
           <li>
-            Extended automation into mobile, standing up Appium/Xcode
-            simulator testing and training the team on the new framework
+            Brought automation to mobile by setting up Appium and Xcode 
+            simulator testing, then trained the team on the new framework.
           </li>
         </ul>
       </Card>

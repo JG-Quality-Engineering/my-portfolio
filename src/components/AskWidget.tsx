@@ -83,7 +83,7 @@ function AskWidget() {
 
   return (
     <div className="ask-widget">
-      <h2>Ask about Josh</h2>
+      <h2>Ask about my experience</h2>
 
       {messages.length > 0 && (
         <div className="ask-widget__messages">
@@ -110,7 +110,7 @@ function AskWidget() {
               type="text"
               value={question}
               onChange={(event) => setQuestion(event.target.value)}
-              placeholder="Ask a question about Josh's experience..."
+              placeholder="e.g., Which automation frameworks has Josh built?"
               disabled={isLoading}
             />
             <button type="submit" disabled={isLoading || !question.trim()}>
@@ -118,8 +118,7 @@ function AskWidget() {
             </button>
           </form>
           <p className="ask-widget__count">
-            {remaining} question{remaining === 1 ? '' : 's'} remaining in this
-            12-hour window.
+            {remaining} question{remaining === 1 ? '' : 's'} left - resets every 12 hours
           </p>
         </>
       )}

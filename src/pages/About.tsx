@@ -32,9 +32,9 @@ function About() {
           Today I build human-in-the-loop GenAI testing tools. I design custom AI workflows 
           and project-specific knowledge bases that let teams automate the slow, repetitive parts of 
           testing. I've become an expert at identifying bottleneck tasks, such as creating PII-free 
-          test data at UPS, and leveraged the power of AI to free up engineers to focus on the work 
-          that requires human judgment. Augmenting my team's workflows with these tools has saved 
-          hundreds of man hours for companies and drastically improved our code accuracy and coverage.
+          test data at UPS, and leverage AI to free up engineers to focus on the work 
+          that requires human judgment. Empowering my teams with these tools has saved 
+          hundreds of man hours and drastically improved our code accuracy and coverage.
         </p>
         <p>
           I want enterprise teams to be able to adopt GenAI testing safely, understand what it's 

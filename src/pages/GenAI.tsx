@@ -7,18 +7,23 @@ function GenAI() {
     <section className="genai-page">
       <Card title="Human-in-the-Loop GenAI Testing" accent="violet">
         <p>
-          Generative AI is changing how software gets built and tested, but it
-          works best as a force multiplier for skilled engineers, not a
-          replacement for their judgment. My focus is on practical "human in
-          the loop" workflows: using AI to generate test data, surface edge
-          cases, and accelerate repetitive QA work, while keeping experienced
-          testers in control of what "correct" actually means.
+          AI is good at volume. It can generate test data, find edge cases, 
+          and take on the repetitive parts of QA faster than any person. 
+          Deciding what "correct" actually means for a product still takes 
+          an experienced tester, so the workflows I build leave that call with people.
         </p>
         <p>
-          The widget below is a small demonstration of that philosophy in
-          practice — a Claude-powered assistant grounded in background
-          information I've provided about my experience, so you can ask it
-          questions directly.
+          The assistant below is a small example. It runs on Claude and answers from 
+          notes I wrote about my own experience, so you can ask it questions directly. 
+          I've engineered the prompt to only respond to questions about my background
+          and professional experience, most of which I've added to its context.
+          There may be aspects of my experience it's unaware of, but it shouldn't invent
+          skills I don't have or roles I've never filled. Just keep in mind that the
+          answers are AI-generated and can be wrong.
+        </p>
+        <p>
+          Go ahead, try to break it!
+          If you do, send me an email and I'll buy you a coffee.
         </p>
       </Card>
 
