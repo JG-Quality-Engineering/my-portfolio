@@ -40,7 +40,7 @@ function About() {
           I want enterprise teams to be able to adopt GenAI testing safely, understand what it's 
           doing, and trust the results. It doesn't have to be a black box or a risk to quality. 
           Paired with experienced testers, it helps teams ship faster, catch more defects, 
-          and cover more ground than they could by hand.
+          and cover more ground than they could without it.
         </p>
       </Card>
     </section>
