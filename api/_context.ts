@@ -25,22 +25,29 @@ Background:
 
 Career history, most recent first:
 
-Sparq | Senior Consultant, Test Automation (Apr 2023-Present)
+Sparq, Inc. | Senior Consultant, Test Automation (Apr 2023-Oct 2026) | Atlanta, GA (remote)
 Project: UPS Corporate Payroll Integration & Cloud migration via GCS
-- Strategic Technical Governance: Defines the architectural vision, technical roadmap, and testing standards for a high-stakes, multi-year migration of all global UPS payroll vendor data in-house.
-- High-Scale Engineering Leadership: Directs, mentors, and scales a cross-functional team of 8 to 20 automation and manual test engineers. Oversees sprint execution, resource allocation, and technical delivery within Azure DevOps (ADO) while leading daily Scrum sessions to optimize velocity.
-- Framework Architecture & Tool Selection: Owns the selection, design, and structural governance of a ground-up Java/TestNG and Google CLI test automation framework. Oversees complex data validation strategies across Google Cloud Suite (GCS Storage, BigQuery, Cloud Run, and Spanner) to guarantee 100% data fidelity.
-- GenAI & Automation Innovation: Defines organizational AI strategy by establishing engineering benchmarks for GitHub Copilot within VS Code. Conceptualized and guided the development of custom AI Skills, Prompts, and automated test data generation systems, cutting down manual cycle prep times across the engineering team.
-- Risk Management & PII Compliance: Acts as the ultimate authority on data security testing protocols, ensuring the safe validation and governance of massive volumes of highly sensitive Personally Identifiable Information (PII). Mandated strict encryption standards and automated CI/CD security gates.
-- Executive Stakeholder Alignment: Serves as the primary technical and delivery liaison between Sparq consulting and corporate UPS leadership, translating complex technical milestones into high-level business risks, project timelines, and strategic resource forecasts.
+- Strategic Technical Governance: Defined the architectural vision, technical roadmap, and testing standards for a high-stakes, multi-year migration of all global UPS payroll vendor data in-house.
+- High-Scale Engineering Leadership: Directed, mentored, and scaled a cross-functional team of 8 to 20 automation and manual test engineers. Oversaw sprint execution, resource allocation, and technical delivery within Azure DevOps (ADO) while leading daily Scrum sessions to optimize velocity.
+- Framework Architecture & Tool Selection: Owned the selection, design, and structural governance of a ground-up Java/TestNG and Google CLI test automation framework (built with Maven, with REST Assured for API testing, running in CI/CD pipelines). Oversaw complex data validation strategies across Google Cloud Suite (GCS Storage, BigQuery, Cloud Run, and Spanner) targeting 100% data fidelity.
+- GenAI & Automation Innovation: Defined organizational AI strategy by establishing engineering benchmarks for GitHub Copilot within VS Code. Conceptualized and guided the development of custom AI Skills, Prompts, and automated test data generation systems, which effectively eliminated manual cycle prep. Introduced GitHub Copilot workflows that doubled team code delivery.
+- AI Tooling Evaluation: Evaluated AI-assisted QA tooling, including self-healing tests and AI defect triage, and made judgment calls on where AI helped and where it didn't.
+- Risk Management & PII Compliance: Owned the data security testing protocols, ensuring the safe validation and governance of massive volumes of highly sensitive Personally Identifiable Information (PII). Mandated strict encryption standards and automated CI/CD security gates.
+- Executive Stakeholder Alignment: Served as the primary technical and delivery liaison between Sparq consulting and corporate UPS leadership, translating complex technical milestones into high-level business risks, project timelines, and strategic resource forecasts.
 
-Lifelines Neuro | Sr. Software QA Analyst & Team Lead (Oct 2021-Apr 2023)
+Special projects (at Sparq):
+- GenAI Training Innovation: Developed a method of leveraging GitHub Copilot and the ADO MCP server to train engineer workspaces from app development requirements and create a reusable project knowledge base.
+- AI-assisted Coding Breakthrough: Created a suite of Copilot skills, prompts, and constraints that interact with the project knowledge base to generate reliable test automation code. Authored standards and best practices documentation for safe, responsible use of these tools.
+- GenAI Tools in Action: Leveraged Copilot to build a test data factory with an intuitive interface, saving hundreds of hours otherwise spent creating data to exercise automated test code.
+
+Lifelines Neuro | Sr. Software QA Analyst & Team Lead (Oct 2021-Apr 2023) | Louisville, KY (hybrid)
+- Regulated Environment: Work involved ISO and IEC standards for medical devices.
 - Remote Team Leadership: Employed Agile testing methodologies to lead and mentor a team of 5 overseas QA members through complex, fast-paced sprints.
 - Technical Innovation: Introduced an automated framework to test a portable medical EEG device desktop application (previously tested 100% manually) using WinAppDriver, Appium, and a Selenium-based command library wrapped in Python scripts.
 - Hardware & Firmware Integration: Maintained an extensive stack of specialized EEG test hardware integrated with data collection software to physically test firmware and peripheral device interaction, ensuring device reliability in the field.
 - Process Readability: Implemented Robot Framework within automated scripts to provide extensive logging, readability, and framework training for transition engineers.
 
-Encyclopedia Britannica, Inc. | QA Technical Lead / Sr. Automation Engineer (Jun 2013-Oct 2021, promoted continuously from QA Automation Engineer & Product Team Lead)
+Encyclopedia Britannica, Inc. | QA Technical Lead / Sr. Automation Engineer (Jun 2013-Oct 2021, promoted continuously from QA Automation Engineer & Product Team Lead) | Chicago, IL (2013-2015 on site, 2016-2021 remote)
 - Agile & Cross-Functional Direction: Led daily Scrum sessions across QA, UX, and development teams, ensuring clear organizational alignment and smooth pipeline delivery.
 - Automation Optimization: Optimized QA testing for all primary institutional web products (including school.eb.com); reduced manual testing reliance and slashed regression cycle completion times by a full week.
 - Performance & Load Testing: Developed an automated method for testing web page performance using HAR output, aggregating and analyzing request response times. Conducted back-end script load testing and server monitoring via DataDog.
@@ -48,9 +55,6 @@ Encyclopedia Britannica, Inc. | QA Technical Lead / Sr. Automation Engineer (Jun
 - Baseline Automation Engineering (2013-2014): Constructed unit/integration test plans and wrote reusable Python/Selenium automated test scripts to validate consumer products.
 
 Special projects (at Encyclopedia Britannica):
-- GenAI Training Innovation: Developed a method of leveraging GitHub Copilot and the ADO MCP server to train engineer workspaces from app development requirements and create a reusable project knowledge base.
-- AI-assisted Coding Breakthrough: Created a suite of Copilot skills, prompts, and constraints that interact with the project knowledge base to generate reliable test automation code. Authored standards and best practices documentation for safe, responsible use of these tools.
-- GenAI Tools in Action: Leveraged Copilot to build a test data factory with an intuitive interface, saving hundreds of hours otherwise spent creating data to exercise automated test code.
 - Disaster Recovery Content Cloning: Salvaged and cloned thousands of mis-uploaded content packages to the production environment using front-end automation following a major staging environment mishap, saving hundreds of hours of manual labor.
 - Automated Data Ingestion System: Devised a front-end script fed by data spreadsheets to mass-submit institutional user information through web forms, granting immediate system access to thousands of incoming student and teacher accounts.
 - Archival Compliance Automation: Architected an annual headless browser automation system paired with PDF software to securely retrieve, lock, watermark, and archive every digital article on britannica.com for national library distribution.
@@ -58,9 +62,9 @@ Special projects (at Encyclopedia Britannica):
 Core skills:
 (Role index: EB = Encyclopedia Britannica, LN = Lifelines Neuro, SP = Sparq. Only tie a skill to a role it is tagged with; untagged skills can be mentioned but not attributed to a specific job.)
 - Languages: Python(EB, LN), Java(LN, SP), SQL(all roles), XML(all roles), CSS(EB), Ruby, C#(LN)
-- Frameworks & Tools: Playwright, Cucumber(SP), TestNG(SP), Selenium(all roles), Appium(EB, LN), Robot Framework(LN), REST API (allroles), Postman(all roles), Kleopatra(SP), WinAppDriver(LN)
+- Frameworks & Tools: Playwright, Cucumber(SP), TestNG(SP), Maven(SP), REST Assured(SP), Selenium(all roles), Appium(EB, LN), Robot Framework(LN), REST API (allroles), Postman(all roles), Kleopatra(SP), WinAppDriver(LN)
 - Cloud & Databases: Google Cloud Suite (GCS Storage, BigQuery, Cloud Run, Spanner)(SP), Azure DevOps (ADO)(SP)
-- Software & IDEs: VS Code(LN, SP), GitHub Copilot(SP), Jira(EB, LN), Confluence(EB, LN), DataDog(EB), Git(all roles), Slack(all roles), PyCharm(EB, LN), Apache JMeter(EB), Xcode(EB), CI/CD Pipelines(all roles)
+- Software & IDEs: VS Code(LN, SP), GitHub Copilot(SP), Jira(EB, LN), Confluence(EB, LN), DataDog(EB), Git(all roles), Slack(all roles), PyCharm(EB, LN), Apache JMeter(EB), Xcode(EB), CI/CD Pipelines(all roles), Claude Code
 
 Education:
 - DePaul University, Chicago — Bachelor of Science (BS) in Information Technology, concentration in Object-Oriented Programming Languages
