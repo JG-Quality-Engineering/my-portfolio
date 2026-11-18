@@ -27,7 +27,7 @@ function Experience() {
             and automated test data generation, cutting manual prep from days to minutes.
           </li>
           <li>
-            Owned security and PII compliance for [ADD VOLUME] of sensitive data, 
+            Owned security and PII compliance for all sensitive data, 
             including encryption and CI/CD security gates.
           </li>
           <li>
